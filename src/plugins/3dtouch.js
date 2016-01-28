@@ -12,8 +12,8 @@ angular.module('ngCordova.plugins.3dtouch', [])
                 for (var key in quickActionHandler) {
                     if (payload.type === key) {
                         quickActionHandler[key]();
-                    };
-                };
+                    }
+                }
             };
         };
 
@@ -29,7 +29,7 @@ angular.module('ngCordova.plugins.3dtouch', [])
                     deferred.reject('Not supported in browser');
                 } else {
                     if (!ThreeDeeTouch) {
-                        deferred.reject('Could not find 3D touch plugin')
+                        deferred.reject('Could not find 3D touch plugin');
                     } else {
                         ThreeDeeTouch.isAvailable(function (value) {
                             deferred.resolve(value);
@@ -56,9 +56,9 @@ angular.module('ngCordova.plugins.3dtouch', [])
                 var deferred = $q.defer();
 
                 var quickAction = {
-                    type,
-                    title,
-                    subtitle
+                    type: type,
+                    title: title,
+                    subtitle: subtitle
                 };
 
                 if (iconType) {
